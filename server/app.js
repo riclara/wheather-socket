@@ -8,7 +8,7 @@ import cities from './cities'
 import page from './page'
 
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
 const darksky = new DarkSky(process.env.DARK_SKY)
 const redisPasswd = process.env.REDIS_PASSWD
 
