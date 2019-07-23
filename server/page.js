@@ -18,7 +18,6 @@ document.body.onload = function() {
   function socketExample() {
     console.log('Creating socket: ', window.location.port);
     const protocol = window.location.protocol
-    console.log(protocol)
     const protocolW = protocol === 'http:' ? 'ws' : 'wss'
     let socket = new WebSocket(protocolW + '://' + window.location.hostname + ':' + window.location.port + '/weather');
     socket.onopen = function() {
