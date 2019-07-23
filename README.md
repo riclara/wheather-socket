@@ -7,3 +7,11 @@
 # Execute
 docker-compose up
 ```
+
+## Deploy App
+
+``` bash
+# Execute
+git push heroku master
+```
+
