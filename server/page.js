@@ -18,8 +18,8 @@ document.body.onload = function() {
   function socketExample() {
     console.log('Creating socket: ', window.location.port);
     const protocol = window.location.protocol
-    const protocolw = protocolw === 'https' ? 'wss' : 'ws'
-    let socket = new WebSocket(protocolw + '://' + window.location.hostname + ':' + window.location.port + '/weather');
+    const protocolW = protocol === 'https' ? 'wss' : 'ws'
+    let socket = new WebSocket(protocolW + '://' + window.location.hostname + ':' + window.location.port + '/weather');
     socket.onopen = function() {
       console.log('Socket open.')
       rec(socket)
