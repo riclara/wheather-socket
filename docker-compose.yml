@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  weather:
+    container_name: weather
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=development

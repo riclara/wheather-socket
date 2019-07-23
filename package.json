@@ -1,0 +1,61 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "tecnical evaluation",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node dist/build.js",
+    "test": "export NODE_ENV=test && mocha --timeout 20000 --compilers js:babel-core/register ./test/**/*.spec.js",
+    "jenkins": "npm test",
+    "dev": "export DARK_SKY=c3e989124643c4e6bc165d7aebefe2d6 && export REDIS_PASSWD=I0TzjjWbLNePGSIshQ0xHsGh0AfwHi8T && webpack --watch",
+    "compile": "babel --source-maps -d compile/ server/",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:riclara/wheather-socket.git"
+  },
+  "keywords": [
+    "evaluation"
+  ],
+  "author": "riclara@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riclara/wheather-socket/issues"
+  },
+  "homepage": "https://github.com/riclara/wheather-socket#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "cross-env": "^5.1.3",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "faker": "^3.1.0",
+    "mocha": "^2.3.4",
+    "nodemon-webpack-plugin": "^0.1.6",
+    "should": "^7.1.1",
+    "supertest": "^1.1.0",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dark-sky": "^1.1.5",
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
+    "redis": "^2.8.0"
+  }
+}
