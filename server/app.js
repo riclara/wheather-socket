@@ -73,7 +73,7 @@ async function weather () {
   })
   return Promise.all(reqs).then(data => {
     const resp = data.map(item => {
-      const mom = moment(item.currently.time)
+      const mom = moment(item.currently.time * 1000)
       return {
         timezone: item.timezone,
         hora: mom.tz(item.timezone).format('h:mm:ss a'),
