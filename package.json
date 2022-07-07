@@ -54,7 +54,7 @@
     "dark-sky": "^1.1.5",
     "express": "^4.16.4",
     "express-ws": "^4.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.26",
     "redis": "^2.8.0"
   }
