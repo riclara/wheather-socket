@@ -52,7 +52,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dark-sky": "^1.1.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-ws": "^4.0.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
